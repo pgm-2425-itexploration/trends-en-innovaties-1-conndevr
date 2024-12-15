@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>books</title>
+    <link rel="stylesheet" href="./public/css/main.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>All our books</h1>
+</div>
+
+<ul>
+    <% for (let i = 0; i < books.length; i++) { %>
+        <li>
+            <a href="/books/<%= books[i].id %>">
+                <strong><%= books[i].title %></strong>
+            </a> by <%= books[i].author %>
+        </li>
+    <% } %>
+</ul>
+
+</body>
+</html>
